@@ -39,7 +39,7 @@ public class TutorialConfig {
     @Autowired
     private ROImageRepository roImageRepository;
 
-//    @Bean
+    @Bean
     public Job tutorialTaskletJob() {
         log.trace("Hi I'm {} log", "TRACE2");
 
@@ -93,7 +93,7 @@ public class TutorialConfig {
                 .queryString("SELECT p FROM ROImage" +
                         " p  ORDER BY id ASC")
                 .build();
-    };
+    }
 
     private ItemProcessor<ROImage, ROImage> jpaPagingProcessor() {
 
