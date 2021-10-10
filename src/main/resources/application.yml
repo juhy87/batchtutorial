@@ -3,6 +3,8 @@ server:
   port: 18082
 spring:
   batch:
+    job:
+      enabled: false  #구동시점 배치 실행 제거
     initialize-schema: always
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
