@@ -1,0 +1,19 @@
+
+server:
+  port: 18082
+spring:
+  batch:
+    initialize-schema: always
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test03?serverTimezone=UTC&characterEncoding=UTF-8
+    username: root
+    password: password1!
+  jpa:
+    hibernate:
+      dialect: org.hibernate.dialect.PostgreSQL10Dialect
+      ddl-auto: update
+    properties:
+      hibernate.enable_lazy_load_no_trans: true
+      hibernate.format_sql: true
+    show-sql: true
